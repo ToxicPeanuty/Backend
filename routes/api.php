@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Models\Money\Transaction;
+use App\ViewModels\Money\TransactionViewModel;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('/money', function(Request $request) {
-    $model = Transaction::getUserTransactions(0)->get();
-    return $model;
+    $model = new TransactionViewModel();
+    dd($model);
 });
