@@ -19,7 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/money', function(Request $request) {
+Route::middleware('api')->get('/money', function(Request $request) {
+    dd(Auth::check());
     $model = new TransactionViewModel();
     dd($model);
 });
