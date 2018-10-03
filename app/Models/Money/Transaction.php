@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Money;
+namespace App\Models\Money;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
@@ -21,12 +21,11 @@ class Transaction extends Model
         'description',
     ];
 
-    public function getUserTransactions($user_id) {
-        static::where('user_id', $user_id);
+    public static function getUserTransactions($user_id) {
+        return self::where('user_id', $user_id);
     }
 
-    public function getTransactionsByCategory($user_id, $category_id) {
-        static::where('user_id', $user_id)
-            ->where('category_id', $category_id);
+    public static function getTransactionsByCategory($user_id, $category_id) {
+        return self::where('user_id', $user_id)->where('category_id', $category_id);
     }
 }

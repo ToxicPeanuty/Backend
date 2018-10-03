@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Money;
+namespace App\Models\Money;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
