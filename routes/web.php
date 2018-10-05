@@ -1,4 +1,5 @@
 <?php
+use App\ViewModels\Money\TransactionViewModel;
 
 /*
 |--------------------------------------------------------------------------
